@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Alumnos</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src="static/JS/tablaAlumnos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/IMG/logo-removebg-blanco.png" alt="Logotipo">
+        </div>
+        <h1>Gestión del Alumnado</h1>
+        <div class="perfil">
+            <div class="perfil-avatar">
+                <img src="static/IMG/profesores.png" alt="Tu Foto de Perfil">
+            </div>
+            <div class="perfil-options">
+                <ul>
+                    <li><a href="profesor.html">Inicio</a></li>
+                    <li><a href="perfilProfesor.html">Mi perfil</a></li>
+                    <li><a href="alumnosProfesor.html">Listado de Alumnos</a></li>
+                    <li><a href="empresasProfesor.html">Listado de Empresas</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="actividades" id="table">
+        <h2>Listado de Alumnos</h2>
+        <div id="wrapper">
+            <table id="tablaAlumno">
+                <thead>
+                    <tr>
+                        <th>Modalidad</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" placeholder="Dual/FCT">Dual</td>
+                        <td contenteditable="true" placeholder="01/01/2023">Juan</td>
+                        <td contenteditable="true" placeholder="Ejemplo de actividad">García Romero</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="Dual/FCT">Dual</td>
+                        <td contenteditable="true" placeholder="01/01/2023">María</td>
+                        <td contenteditable="true" placeholder="Ejemplo de actividad">Gonzalez Ruíz</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="Dual/FCT">FCT</td>
+                        <td contenteditable="true" placeholder="01/01/2023">Carlos</td>
+                        <td contenteditable="true" placeholder="Ejemplo de actividad">Higuera Dual</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="Dual/FCT">FCT</td>
+                        <td contenteditable="true" placeholder="01/01/2023">Emilio</td>
+                        <td contenteditable="true" placeholder="Ejemplo de actividad">Moreno Campillos</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button id="addRow" onclick="addRow()">Agregar</button>
+    </section>
+
+    <section class="bienvenida">
+        <button class="agregar" ><a href="perfilAlumnoProfesor.html">Ver alumno seleccionado</a></button>
+    </section>
+    
+
+    <div class="centered-image">
+        <img src="static/IMG/logo-removebg.png" alt="Imagen con transparencia">
+    </div>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("tablaAlumno");
+            var row = table.insertRow(-1);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+
+            cell0.innerHTML = '<td contenteditable="true" placeholder="Dual/FCT">Dual/FCT</td>';
+            cell1.innerHTML = '<td contenteditable="true" placeholder="Juan">Nombre</td>';
+            cell2.innerHTML = '<td contenteditable="true" placeholder="García Romero">Apellido1 Apellido2</td>';
+            cell3.innerHTML = '<td><button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button></td>';
+        }
+
+        function deleteRow(button) {
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        document.getElementById("table").addEventListener("click", function(e) {
+            if (e.target && e.target.nodeName == "TD") {
+                e.target.setAttribute("contenteditable", "true");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

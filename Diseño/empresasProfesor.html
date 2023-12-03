@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Empresas</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <script src="static/JS/tablaAlumnos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/IMG/logo-removebg-blanco.png" alt="Logotipo">
+        </div>
+        <h1>Gestión de Empresas</h1>
+        <div class="perfil">
+            <div class="perfil-avatar">
+                <img src="static/IMG/profesores.png" alt="Tu Foto de Perfil">
+            </div>
+            <div class="perfil-options">
+                <ul>
+                    <li><a href="profesor.html">Inicio</a></li>
+                    <li><a href="perfilProfesor.html">Mi perfil</a></li>
+                    <li><a href="alumnosProfesor.html">Listado de Alumnos</a></li>
+                    <li><a href="empresasProfesor.html">Listado de Empresas</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="actividades" id="table">
+        <h2>Gestión de Empresas</h2>
+        <div id="wrapper">
+            <table id="tablaActividades">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Empresa</th>
+                        <th>Colabora Desde</th>
+                        <th>Sede</th>
+                        <th>Alumnos en Prácticas</th>
+                        <th>Observaciones</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" placeholder="Innovatech Solutions">Innovatech Solutions</td>
+                        <td contenteditable="true" placeholder="01/09/2019">01/09/2019</td>
+                        <td contenteditable="true" placeholder="Málaga">Málaga</td>
+                        <td contenteditable="true" placeholder="2">2</td>
+                        <td contenteditable="true" placeholder="Especialios">Especialistas en Front-End</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="TechSolutions XYZ">TechSolutions XYZ</td>
+                        <td contenteditable="true" placeholder="15/05/2021">15/05/2021</td>
+                        <td contenteditable="true" placeholder="Málaga">Málaga</td>
+                        <td contenteditable="true" placeholder="4">4</td>
+                        <td contenteditable="true" placeholder="Proyecto de IA en desarrollo">Proyecto de IA en desarrollo</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="DataTech Innovations">DataTech Innovations</td>
+                        <td contenteditable="true" placeholder="03/12/2018">03/12/2018</td>
+                        <td contenteditable="true" placeholder="Málaga">Málaga</td>
+                        <td contenteditable="true" placeholder="3">3</td>
+                        <td contenteditable="true" placeholder="Enfoque en Big Data">Enfoque en Big Data</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="InnoSoft Tech">InnoSoft Tech</td>
+                        <td contenteditable="true" placeholder="20/07/2020">20/07/2020</td>
+                        <td contenteditable="true" placeholder="Málaga">Málaga</td>
+                        <td contenteditable="true" placeholder="5">5</td>
+                        <td contenteditable="true" placeholder="Especializados en desarrollo web">Especializados en desarrollo web</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true" placeholder="SecureNet Solutions">SecureNet Solutions</td>
+                        <td contenteditable="true" placeholder="08/04/2016">08/04/2016</td>
+                        <td contenteditable="true" placeholder="Málaga">Málaga</td>
+                        <td contenteditable="true" placeholder="7">7</td>
+                        <td contenteditable="true" placeholder="Especialistas en ciberseguridad">Especialistas en ciberseguridad</td>
+                        <td>
+                            <button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <button id="addRow" onclick="addRow()">Agregar</button>
+    </section>
+
+    <div class="centered-image">
+        <img src="static/IMG/logo-removebg.png" alt="Imagen con transparencia">
+    </div>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("tablaActividades");
+            var row = table.insertRow(-1);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+            var cell4 = row.insertCell(4);
+            var cell5 = row.insertCell(5);
+
+            cell0.innerHTML = '<td contenteditable="true" placeholder="Empresa">Empresa</td>';
+            cell1.innerHTML = '<td contenteditable="true" placeholder="01/01/2023">01/01/2023</td>';
+            cell2.innerHTML = '<td contenteditable="true" placeholder="Ciudad">Ciudad</td>';
+            cell3.innerHTML = '<td contenteditable="true" placeholder="0">0</td>';
+            cell4.innerHTML = '<td contenteditable="true" placeholder="Sin observaciones">Sin observaciones</td>';
+            cell5.innerHTML = '<td><button class="deleteRow" onclick="deleteRow(this)" id="deleteRow">-</button></td>';
+        }
+
+        function deleteRow(button) {
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        document.getElementById("table").addEventListener("click", function(e) {
+            if (e.target && e.target.nodeName == "TD") {
+                e.target.setAttribute("contenteditable", "true");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

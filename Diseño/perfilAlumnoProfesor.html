@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Alumno X</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/IMG/logo-removebg-blanco.png" alt="Logotipo">
+        </div>
+        <h1>Perfil Alumno X</h1>
+        <div class="perfil">
+            <div class="perfil-avatar">
+                <img src="static/IMG/profesores.png" alt="Tu Foto de Perfil">
+            </div>
+            <div class="perfil-options">
+                <ul>
+                    <li><a href="profesor.html">Inicio</a></li>
+                    <li><a href="perfilProfesor.html">Mi perfil</a></li>
+                    <li><a href="alumnosProfesor.html">Listado de Alumnos</a></li>
+                    <li><a href="empresasProfesor.html">Listado de Empresas</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="miPerfil">
+        <div class="foto">
+            <img src="static/IMG/perfilAlumno2.jpg" alt="foto de perfil">
+        </div>
+        <div class="datos">
+            <h2 contenteditable="true">Tus Datos</h2>
+            <p><strong>Nombre:</strong> <span contenteditable="true">Juan</span></p>
+            <p><strong>Apellido:</strong> <span contenteditable="true">García Pérez</span></p>
+            <p><strong>Email:</strong> <span contenteditable="true">juan.garcia@example.com</span></p>
+            <p><strong>Teléfono:</strong> <span contenteditable="true">+34 123 456 789</span></p>
+            <p><strong>DNI:</strong> <span contenteditable="true">12345678A</span></p>
+            <p><strong>Fecha de nacimiento:</strong> <span contenteditable="true">01/01/1990</span></p>
+            <p><strong>Empresa de prácticas:</strong> <a href="empresaAlumno.html" contenteditable="true">Ntt Data</a></p>
+            <p><strong>Profesor Tutor asignado:</strong> <span contenteditable="true">Julio Matamoros</span></p>
+            <p><strong>Nº de horas totales para realizar en DUAL:</strong> <span contenteditable="true">150/500 horas</span></p>
+            <p><strong>Nº de horas totales para realizar en FCT:</strong> <span contenteditable="true">0/300 horas</span></p>
+        </div>
+        <div class="observaciones">
+            <h3 contenteditable="true">Observaciones</h3>
+            <p contenteditable="true">Aquí puedes incluir observaciones sobre la persona.</p>
+        </div>
+    </div>
+    
+
+    <section class="actividades" id="table">
+        <h2>Tabla de Actividades Diarias del Alumno</h2>
+        <div id="wrapper">
+            <table id="tablaActividades">
+                <thead>
+                    <tr>
+                        <th>Tipo de Práctica</th>
+                        <th>Fecha</th>
+                        <th>Actividad Realizada</th>
+                        <th>Total de Horas</th>
+                        <th>Observaciones o Incidencias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dual</td>
+                        <td>05/11/2023</td>
+                        <td>Desarrollo de software</td>
+                        <td>8</td>
+                        <td>Ninguna</td>
+                      </tr>
+                      <tr>
+                        <td>Dual</td>
+                        <td>03/11/2023</td>
+                        <td>Hibernate</td>
+                        <td>6</td>
+                        <td>Es horrible!</td>
+                      </tr>
+                      <tr>
+                        <td>FCT</td>
+                        <td>25/12/2023</td>
+                        <td>Lenguaje de Marcas</td>
+                        <td>20</td>
+                        <td>Muy divertido!</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="centered-image">
+        <img src="static/IMG/logo-removebg.png" alt="Imagen con transparencia">
+    </div>
+
+</body>
+</html>

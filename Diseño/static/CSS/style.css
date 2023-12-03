@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Cabecera y comúnes */
+header {
+    background-color: #002858;
+    color: #ffc836;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+.perfil {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.perfil-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.perfil-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil-options li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.perfil a {
+    text-decoration: none;
+    color: #0074b7;
+}
+
+.perfil a:hover {
+    text-decoration: underline;
+    display: block;
+}
+
+.perfil:hover .perfil-options {
+    display: block;
+}
+
+.perfil-options {
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    display: none;
+    background-color: #002858;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 100px;
+}
+
+.perfil-options a {
+    color: white;
+}
+
+.perfil-options a:hover{
+    text-decoration: none;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; 
+}
+.logo-container img {
+    width: 50px; 
+    height: auto; 
+}
+
+.centered-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9; 
+    opacity: 0.1; 
+    pointer-events: none;
+}
+
+.centered-image img {
+    max-width: 100%; 
+    height: auto;
+}
+
+/*alumno.html*/
+.bienvenida {
+    text-align: center;
+    margin: 50px auto; 
+    max-width: 600px; 
+}
+
+.bienvenida h2 {
+    color: #0074b7; 
+}
+
+.bienvenida p {
+    color: #333; 
+}
+
+.bienvenida a {
+    text-decoration: none;
+    color: white;
+}
+
+.agregar {
+    background-color: #0074b7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregar:hover {
+    background-color: #00569b;
+}
+.imagen-bienvenida {
+    max-width: 100%; 
+    width: 45%;
+    margin:  auto; 
+    overflow: hidden; 
+}
+
+.imagen-bienvenida img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/*perfilAlumno.html*/
+.foto img {
+    max-width: 100%;
+    }
+    
+    .miPerfil {
+        display: flex;
+    }
+    
+    .miPerfil {
+        display: flex;
+        justify-content: space-around;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    
+    .foto {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 4em;
+    }
+    
+    .foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .datos {
+        flex-grow: 1;
+        margin: 0 20px;
+    }
+    
+    .datos h2 {
+        color: #0074b7;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .datos input, .datos label, .datos textarea {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    .datos textarea {
+        resize: vertical;
+    }
+    
+    .observaciones {
+        flex-grow: 1;
+    }
+    
+    .observaciones h3 {
+        color: #0074b7;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .observaciones textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        resize: vertical;
+    }
+
+    /*Perfil Profesor*/
+    .fotoProfe {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 0.5rem;
+    }
+
+    .fotoProfe img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*tablAlumno.html*/
+    .actividades {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+
