@@ -1,0 +1,399 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #4CAF50;
+    --color-secundario: #000000;
+    --color-fondo: #FFFFFF;
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #555555; /* Ajuste de un tono más oscuro */
+  }
+  
+  /* Tipografía */
+  h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-primario);
+  }
+  
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-texto-principal);
+  }
+  
+  /* Enlaces */
+  a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+  }
+  a:hover {
+    color: var(--color-primario);
+  }
+
+  /* Estilos específicos para enlaces de login */
+
+  #recuperar a:hover{
+    color: var(--color-primario);
+  }
+  #cuenta a:hover{
+    color: var(--color-primario);
+  }
+
+  
+  /* Estilos básicos */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-texto-principal);
+    color: var(--color-texto-principal);
+  }
+  
+  header {
+    background-color: var(--color-secundario);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  header a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 25px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-secundario);
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+  }
+  
+  .container {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+
+
+.super {
+  display: flex;
+  justify-content: center;
+}
+
+  /* Estilos para la publicidad izquierda */
+.publicidad-izquierda {
+  float: left;
+  width: 20%; 
+  margin-right: 20px; 
+  margin-left: 40px;
+  background-color: var(--color-texto-principal);
+  display: flex;
+  max-width:20%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicidad-izquierda section{
+  margin: 100px;
+}
+
+.publicidad-izquierda section p{
+  color: white;
+}
+
+/* Estilos para la publicidad derecha */
+.publicidad-derecha {
+  float: right;
+  width: 20%; 
+  margin-left: 20px; 
+  margin-right: 40px;
+  background-color: var(--color-texto-principal);
+  display: flex;
+  max-width:20%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicidad-derecha section{
+  margin: 100px;
+}
+
+.publicidad-derecha section p{
+  color: white;
+}
+  
+  /* Botones */
+  button {
+    background-color: var(--color-primario);
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #80E27E; 
+  }
+  
+  /* Estilos específicos para la página de detalles del producto */
+  #detalles-producto {
+    margin-top: 20px;
+  }
+  
+  .precio {
+    color: var(--color-primario);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .imagenes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .imagenes img {
+    width: 30%;
+  }
+  
+  .reseñas {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .reseña {
+    width: 45%;
+    border: 1px solid var(--color-primario);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .calificación {
+    color: var(--color-primario);
+    font-weight: bold;
+  }
+  
+  #especificaciones ul {
+    list-style: none;
+  }
+
+  .precio {
+    color: var(--color-secundario);
+  }
+  
+  /* Estilos específicos para la página de inicio de sesión */
+  section {
+    margin-bottom: 20px;
+  }
+
+  /* Estilos específicos para la página de información */
+  section.info{
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-texto-secundario);
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  #cuenta ul {
+    list-style: none;
+  }
+  
+  /* Estilos específicos para la página de contacto */
+  textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+ /* Estilos específicos para la página de categorías */
+ .productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.producto {
+  flex: 0 1 calc(20% - 20px); 
+  margin-bottom: 20px;
+  box-sizing: border-box; /
+}
+
+.paginacion a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+
+/* Estilos específicos para la página de inicio */
+.hero img, .categorias img, .destacados img, .producto img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+/*Estilos hero*/
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+}
+
+.hero h1 {
+  background-color:rgb(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding:10px;
+  font-size: 2em; 
+}
+
+.hero p {
+  font-size: 1.5em;
+  color:white;
+  background-color:rgb(0, 0, 0, 0.7) ;
+  padding:10px;
+  border-radius: 5px;
+ 
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 20px; 
+  padding: 10px 20px;
+  background-color:var(--color-primario); 
+  color: #fff; 
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* Estilos específicos para la página de panel Admin */
+
+
+.containerPanel {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.containerPanel h1 {
+  text-align: center;
+}
+
+.containerPanel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.containerPanel th, .containerPanel td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.containerPanel th {
+  background-color: #f2f2f2;
+}
+
+.containerPanel td {
+  background-color: #f2f2f2;
+}
+
+.containerPanel img {
+  max-width: 50px;
+  height: auto;
+}
+
+.containerPanel .edit,.containerPanel .delete {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.containerPanel .edit {
+  background-color: #007bff;
+}
+
+.containerPanel .delete {
+  background-color: #dc3545;
+}
+
+.containerPanel .create-product {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+

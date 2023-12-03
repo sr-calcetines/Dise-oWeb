@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="static/CSS/style.css">
+  <script src="static/JS/app.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="informacion.html">Sobre nosotros</a></li>
+            <li><a href="categoriaProductos.html">Categoría de productos</a></li>
+            <li><a href="producto.html">Producto destacado</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+  <div class="containerPanel">
+    <h1>Panel de Administración</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Imagen</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Fecha de Creación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se añadirán dinámicamente las filas con los productos -->
+        <!-- Ejemplo de fila de producto -->
+        <tr>
+          <td>Producto 1</td>
+          <td>Descripción del producto 1</td>
+          <td><img src="static/IMG/sudadera1.webp" alt="Producto 1"></td>
+          <td>$19.99</td>
+          <td>50</td>
+          <td>2023-01-01</td>
+          <td>
+            <a href="#" class="edit">Editar</a>
+            <a href="#" class="delete">Eliminar</a>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+    <button class="create-product">Crear Nuevo Producto</button>
+
+    <h1>Últimos Pedidos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Fecha de Creación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Producto 1</td>
+        <td>Descripción del producto 1</td>
+        <td><img src="static/IMG/sudadera1.webp" alt="Producto 1"></td>
+        <td>$19.99</td>
+        <td>50</td>
+        <td>2023-01-01</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Producto 2</td>
+        <td>Descripción del producto 2</td>
+        <td><img src="static/IMG/sudadera2.webp" alt="Producto 1"></td>
+        <td>$14.99</td>
+        <td>30</td>
+        <td>2023-01-03</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  <div class="modal">
+   
+  </div>
+
+  
+
+</body>
+</html>
